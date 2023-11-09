@@ -1,0 +1,21 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|D|D|D|D|D|D|D|C|}
+\multicolumn{10}{|l|}{\textbf{Homobilayers of h-BN}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} \\
+			\hline
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (0.00, 0.00)}&AA' & \textcolor{blue}{16.11}&- & \textcolor{blue}{1}&1 & \textcolor{blue}{2.51}&2.52 & \textcolor{blue}{3.44}&3.13 \\
+			\textcolor{blue}{(Id)  (-0.33, 0.33)}&AB' & \textcolor{blue}{16.08}&- & \textcolor{blue}{2}&2 & \textcolor{blue}{2.51}&2.52 & \textcolor{blue}{3.44}&3.13 \\
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (-0.33, 0.33)}&AB & \textcolor{blue}{15.35}&- & \textcolor{blue}{3}&3 & \textcolor{blue}{2.51}&2.52 & \textcolor{blue}{3.48}&3.13 \\
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (0.33, -0.33)}&A'B & \textcolor{blue}{13.33}&- & \textcolor{blue}{4}&4 & \textcolor{blue}{2.51}&2.52 & \textcolor{blue}{3.65}&3.13 \\
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&AA & \textcolor{blue}{12.97}&- & \textcolor{blue}{5}&5 & \textcolor{blue}{2.51}&2.52 & \textcolor{blue}{3.70}&2.52 \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Constantinescu2013} (black), which were obtained using 
+        VASP with the PBE functional and D van der Waals corrections. 
+        $a$ is the in-plane lattice constant. The lattice constants 
+        in the reference are found by optimization of each bilayer.}
+\end{table*}

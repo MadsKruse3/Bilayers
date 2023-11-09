@@ -1,0 +1,19 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|G|}
+\multicolumn{13}{|l|}{\textbf{Homobilayers of Cr$_{2}$Br$_{2}$S$_{2}$}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & $\Delta$\textit{E}$_{\text{mag}}$ \\
+			\hline
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&AA & \textcolor{blue}{16.75}&N/A & \textcolor{blue}{1}&1 & \textcolor{blue}{4.74}&4.71 & \textcolor{blue}{8.05}&8.10 & \textcolor{blue}{FM}&AFM & -0.48 \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Wilson2021} (black), which were obtained using 
+        Quantum expresso package with the PBE functional and 
+        D2 van der Waals corrections. The unit of 
+        $\Delta$\textit{E}$_{\text{mag}}$ 
+        is meV/unit cell. The lattice constants in the reference 
+        are obtained by relaxations of the bilayer.}
+\end{table*}

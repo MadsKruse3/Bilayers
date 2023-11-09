@@ -1,0 +1,21 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|G|}
+\multicolumn{13}{|l|}{\textbf{Homobilayers of Cr$_{2}$Br$_{2}$Se$_{2}$}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & $\Delta$\textit{E}$_{\text{mag}}$ \\
+			\hline
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&AA & \textcolor{blue}{17.74}&N/A & \textcolor{blue}{1}&1 & \textcolor{blue}{5.03}&5.08 & \textcolor{blue}{7.87}&N/A & \textcolor{blue}{FM}&AFM & -0.36 \\
+			\textcolor{blue}{(Id)  (0.00, -0.50)}&N/A & \textcolor{blue}{12.53}&N/A & \textcolor{blue}{2}&N/A & \textcolor{blue}{5.03}&- & \textcolor{blue}{8.52}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.50, 0.00)}&N/A & \textcolor{blue}{9.579}&N/A & \textcolor{blue}{3}&N/A & \textcolor{blue}{5.03}&- & \textcolor{blue}{9.06}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.50, -0.50)}&N/A & \textcolor{blue}{None}&N/A & \textcolor{blue}{4}&N/A & \textcolor{blue}{5.03}&- & \textcolor{blue}{9.48}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Yang2022} (black), which were obtained using 
+        VASP package with the PBE functional and 
+        optB86b van der Waals corrections. The energy difference is in meV/cell. 
+        The lattice constants in the reference are obtained 
+        by relaxations of the bilayer.}
+\end{table*}

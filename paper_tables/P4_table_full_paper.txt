@@ -1,0 +1,22 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|D|D|D|D|D|D|D|C|}
+\multicolumn{10}{|l|}{\textbf{Homobilayers of P$_{4}$}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{min}}$ [Å]} \\
+			\hline
+			\textcolor{blue}{(Id)  (0.00, 0.50)}&AB & \textcolor{blue}{21.36}&N/A & \textcolor{blue}{1}&1 & \textcolor{blue}{4.63}&4.52 & \textcolor{blue}{3.24}&3.58 \\
+			\textcolor{blue}{(Id)  (-0.18, -1.00)}&N/A & \textcolor{blue}{18.32}&N/A & \textcolor{blue}{2}&N/A & \textcolor{blue}{4.63}&N/A & \textcolor{blue}{3.40}&N/A \\
+			\textcolor{blue}{(Id)  (0.50, 0.00)}&AD & \textcolor{blue}{17.04}&N/A & \textcolor{blue}{3}&3 & \textcolor{blue}{4.63}&4.54 & \textcolor{blue}{3.48}&3.74 \\
+			\textcolor{blue}{(Id)  (0.00, -1.00)}&AA & \textcolor{blue}{16.36}&N/A & \textcolor{blue}{4}&2 & \textcolor{blue}{4.63}&4.54 & \textcolor{blue}{3.59}&3.82 \\
+			\textcolor{blue}{(Id)  (-0.32, -0.50)}&N/A & \textcolor{blue}{15.49}&N/A & \textcolor{blue}{5}&N/A & \textcolor{blue}{4.63}&N/A & \textcolor{blue}{3.60}&N/A \\
+			\textcolor{blue}{(Id)  (-0.50, -0.50)}&AC & \textcolor{blue}{13.14}&N/A & \textcolor{blue}{6}&4 & \textcolor{blue}{4.63}&4.55 & \textcolor{blue}{3.84}&4.03 \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Shu2016} (black), which were obtained using 
+        Quantum Expresso with the PBE functional and 
+        vdW-DF van der Waals corrections. The lattice constants 
+        in the reference are found by optimization of each bilayer.}
+\end{table*}

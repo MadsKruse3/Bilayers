@@ -1,0 +1,22 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|D|D|D|D|D|D|D|C|}
+\multicolumn{10}{|l|}{\textbf{Homobilayers of MoSe$_{2}$ (H phase)}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} \\
+			\hline
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (-0.33, -0.67)}&AA' & \textcolor{blue}{28.44}&22.81 & \textcolor{blue}{1}&1 & \textcolor{blue}{3.32}&3.29 & \textcolor{blue}{6.52}&6.53 \\
+			\textcolor{blue}{(Id)  (-0.67, -0.33)}&AB' & \textcolor{blue}{28.26}&20.44 & \textcolor{blue}{2}&3 & \textcolor{blue}{3.32}&3.29 & \textcolor{blue}{6.50}&6.63 \\
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (0.00, 0.00)}&AB & \textcolor{blue}{26.49}&22.52 & \textcolor{blue}{3}&2 & \textcolor{blue}{3.32}&3.29 & \textcolor{blue}{6.60}&6.53 \\
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (0.33, -0.33)}&A'B & \textcolor{blue}{20.28}&14.25 & \textcolor{blue}{4}&4 & \textcolor{blue}{3.32}&3.29 & \textcolor{blue}{7.06}&7.10 \\
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&AA & \textcolor{blue}{19.84}&13.59 & \textcolor{blue}{5}&5 & \textcolor{blue}{3.32}&3.29 & \textcolor{blue}{7.09}&7.13 \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Jiangang2014} (black), which were obtained using 
+        VASP with the PBE functional and D2 van der Waals corrections. 
+        $a$ is the in-plane lattice constant. The in plane lattice 
+        constants in the reference are those obtained experimentally 
+        for the bulk version of the material.}
+\end{table*}

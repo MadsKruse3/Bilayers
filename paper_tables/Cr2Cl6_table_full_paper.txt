@@ -1,0 +1,35 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|G|}
+\multicolumn{13}{|l|}{\textbf{Homobilayers of Cr$_{2}$Cl$_{6}$}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & $\Delta$\textit{E}$_{\text{mag}}$ \\
+			\hline
+			\textcolor{blue}{(Id)  (0.33, -0.33)}&AB (aB$_{b}$c) & \textcolor{blue}{12.31}&N/A & \textcolor{blue}{1}&1 & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.80}&N/A & \textcolor{blue}{FM}&AFM & -1.03 \\
+			\textcolor{blue}{(Id)  (0.32, 0.00)}&HT (bA$_{c}$a) & \textcolor{blue}{12.14}&N/A & \textcolor{blue}{2}&2 & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.83}&N/A & \textcolor{blue}{FM}&AFM & -0.02 \\
+			\textcolor{blue}{(Id)  (0.31, 0.00)}&HT (bA$_{c}$a) & \textcolor{blue}{12.14}&N/A & \textcolor{blue}{3}&2 & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.83}&N/A & \textcolor{blue}{N/A}&AFM & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.32, 0.00)}&rHT (aA$_{c}$b) & \textcolor{blue}{12.14}&N/A & \textcolor{blue}{4}&3 & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.83}&N/A & \textcolor{blue}{FM}&AFM & -0.79 \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.31, 0.00)}&rHT (aA$_{c}$b) & \textcolor{blue}{12.14}&N/A & \textcolor{blue}{5}&3 & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.83}&N/A & \textcolor{blue}{N/A}&AFM & N/A \\
+			\textcolor{blue}{(Id)  (0.28, 0.00)}&HT (bC$_{c}$a) & \textcolor{blue}{12.05}&N/A & \textcolor{blue}{6}&2 & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.84}&N/A & \textcolor{blue}{N/A}&AFM & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.28, 0.00)}&rHT (bB$_{a}$c) & \textcolor{blue}{11.99}&N/A & \textcolor{blue}{7}&3 & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.86}&N/A & \textcolor{blue}{N/A}&AFM & N/A \\
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&AA (aA$_{b}$c) & \textcolor{blue}{11.61}&N/A & \textcolor{blue}{8}&4 & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.90}&N/A & \textcolor{blue}{FM}&AFM & -0.31 \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.52, 0.00)}&N/A & \textcolor{blue}{11.35}&N/A & \textcolor{blue}{9}&N/A & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.94}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.50, 0.00)}&N/A & \textcolor{blue}{11.34}&N/A & \textcolor{blue}{10}&N/A & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.94}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.50, 0.00)}&N/A & \textcolor{blue}{10.31}&N/A & \textcolor{blue}{11}&N/A & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{6.11}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (-0.28, 0.00)}&N/A & \textcolor{blue}{9.665}&N/A & \textcolor{blue}{12}&N/A & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{6.22}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.33, -0.33)}&N/A & \textcolor{blue}{9.574}&N/A & \textcolor{blue}{13}&N/A & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{6.24}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.00, 0.00)}&N/A & \textcolor{blue}{9.342}&N/A & \textcolor{blue}{14}&N/A & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{6.28}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{N/A}&AC (aC$_{b}$c) & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{N/A}&bB$_{c}$a & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{N/A}&aB$_{c}$b & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{N/A}&aC$_{c}$b & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{N/A}&rHT' (bA$_{a}$c) & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{N/A}&bC$_{a}$c & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&AFM & N/A \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Gibertini2021} (black), which were obtained using 
+        Quantum expresso with the vdW-DF2 functional. a is the 
+        in-plane lattice constant.}
+\end{table*}

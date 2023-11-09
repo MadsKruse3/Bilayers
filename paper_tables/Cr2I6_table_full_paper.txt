@@ -1,0 +1,31 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|C|}
+\multicolumn{13}{|l|}{\textbf{Bilayer Cr$_{2}$I$_{6}$}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & \textit{E}$_{\text{diff}}$ [meV] \\
+			\hline
+			\textcolor{blue}{(Id)  (0.33, -0.33)}&AB & \textcolor{blue}{13.37}&N/A & \textcolor{blue}{1}&1 & \textcolor{blue}{7.01}&6.89 & \textcolor{blue}{6.65}&6.68 & \textcolor{blue}{FM}&FM & -9.37 \\
+			\textcolor{blue}{(Id)  (0.00, -0.69)}&AB' & \textcolor{blue}{13.28}&N/A & \textcolor{blue}{2}&2 & \textcolor{blue}{7.01}&6.89 & \textcolor{blue}{6.69}&6.73 & \textcolor{blue}{AFM}&AFM & 2.91 \\
+			\textcolor{blue}{(Id)  (0.03, -0.67)}&AB' & \textcolor{blue}{None}&N/A & \textcolor{blue}{3}&2 & \textcolor{blue}{7.01}&N/A & \textcolor{blue}{6.69}&6.73 & \textcolor{blue}{}&AFM &  \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.00, -0.32)}&N/A & \textcolor{blue}{13.10}&N/A & \textcolor{blue}{4}&N/A & \textcolor{blue}{7.01}&N/A & \textcolor{blue}{6.70}&N/A & \textcolor{blue}{FM}&N/A & -3.89 \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.03, -0.31)}&N/A & \textcolor{blue}{None}&N/A & \textcolor{blue}{5}&N/A & \textcolor{blue}{7.01}&N/A & \textcolor{blue}{6.69}&N/A & \textcolor{blue}{}&N/A &  \\
+			\textcolor{blue}{(Id)  (0.00, -0.01)}&N/A & \textcolor{blue}{None}&N/A & \textcolor{blue}{6}&N/A & \textcolor{blue}{7.01}&N/A & \textcolor{blue}{6.82}&N/A & \textcolor{blue}{}&N/A &  \\
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&N/A & \textcolor{blue}{None}&N/A & \textcolor{blue}{7}&N/A & \textcolor{blue}{7.01}&N/A & \textcolor{blue}{6.81}&N/A & \textcolor{blue}{}&N/A &  \\
+			\textcolor{blue}{(Id)  (-0.01, -0.02)}&N/A & \textcolor{blue}{None}&N/A & \textcolor{blue}{8}&N/A & \textcolor{blue}{7.01}&N/A & \textcolor{blue}{6.82}&N/A & \textcolor{blue}{}&N/A &  \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.50, 0.00)}&N/A & \textcolor{blue}{None}&N/A & \textcolor{blue}{9}&N/A & \textcolor{blue}{7.01}&N/A & \textcolor{blue}{6.86}&N/A & \textcolor{blue}{}&N/A &  \\
+			\textcolor{blue}{(Id)  (0.50, 0.00)}&N/A & \textcolor{blue}{None}&N/A & \textcolor{blue}{10}&N/A & \textcolor{blue}{7.01}&N/A & \textcolor{blue}{7.07}&N/A & \textcolor{blue}{}&N/A &  \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.33, -0.33)}&N/A & \textcolor{blue}{None}&N/A & \textcolor{blue}{11}&N/A & \textcolor{blue}{7.01}&N/A & \textcolor{blue}{7.22}&N/A & \textcolor{blue}{}&N/A &  \\
+			\textcolor{blue}{(Id)  (0.31, -0.67)}&N/A & \textcolor{blue}{None}&N/A & \textcolor{blue}{12}&N/A & \textcolor{blue}{7.01}&N/A & \textcolor{blue}{7.23}&N/A & \textcolor{blue}{}&N/A &  \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.00, 0.00)}&N/A & \textcolor{blue}{None}&N/A & \textcolor{blue}{13}&N/A & \textcolor{blue}{7.01}&N/A & \textcolor{blue}{7.28}&N/A & \textcolor{blue}{}&N/A &  \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Sivadas2018} (black), which were obtained using 
+        VASP with the PBEsol+U functional (U=3 eV on Cr $d$-orbitals) 
+        and D3 van der Waals corrections. $a$ is the in-plane 
+        lattice constant. The in plane lattice constants 
+        in the reference were computed by optimization calculations 
+        performed for the bilayers.}
+\end{table*}

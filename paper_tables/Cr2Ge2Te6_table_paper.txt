@@ -1,0 +1,22 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|G|}
+\multicolumn{13}{|l|}{\textbf{Homobilayers of Cr$_{2}$Ge$_{2}$Te$_{6}$}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{min}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & $\Delta$\textit{E}$_{\text{mag}}$ \\
+			\hline
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (0.32, -0.07)}&AB & \textcolor{blue}{21.66}&N/A & \textcolor{blue}{1}&1 & \textcolor{blue}{6.89}&6.84 & \textcolor{blue}{3.40}&3.44 & \textcolor{blue}{AFM}&FM & 21.00 \\
+			\textcolor{blue}{(Id)  (0.33, 0.67)}&AB & \textcolor{blue}{21.66}&N/A & \textcolor{blue}{2}&1 & \textcolor{blue}{6.89}&6.84 & \textcolor{blue}{3.40}&3.44 & \textcolor{blue}{AFM}&FM & 20.99 \\
+			\textcolor{blue}{(Id, Iz)  (0.67, 0.00)}&N/A & \textcolor{blue}{20.61}&N/A & \textcolor{blue}{3}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.50}&N/A & \textcolor{blue}{AFM}&N/A & 17.12 \\
+			\textcolor{blue}{(R$^{z}_{2}$)  (0.32, 0.27)}&N/A & \textcolor{blue}{20.61}&N/A & \textcolor{blue}{4}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.50}&N/A & \textcolor{blue}{AFM}&N/A & 17.22 \\
+			\textcolor{blue}{(Id)  (0.33, 0.34)}&N/A & \textcolor{blue}{20.27}&N/A & \textcolor{blue}{5}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.56}&N/A & \textcolor{blue}{AFM}&N/A & 20.30 \\
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&N/A & \textcolor{blue}{19.53}&N/A & \textcolor{blue}{6}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.52}&N/A & \textcolor{blue}{AFM}&N/A & 16.76 \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results
+        Ref. \cite{Ren2021} (black), which were obtained using VASP with 
+        the PBEsol+U functional (U=1.7 eV on Cr $d$-orbitals). The unit of 
+        $\Delta$\textit{E}$_{\text{mag}}$ 
+        is meV/unit cell.}
+\end{table*}

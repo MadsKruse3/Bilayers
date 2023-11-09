@@ -1,0 +1,21 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|G|}
+\multicolumn{13}{|l|}{\textbf{Homobilayers of Cr$_{2}$Cl$_{6}$}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & $\Delta$\textit{E}$_{\text{mag}}$ \\
+			\hline
+			\textcolor{blue}{(Id)  (0.33, -0.33)}&R$ar{3}$ & \textcolor{blue}{12.31}&N/A & \textcolor{blue}{1}&1 & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.80}&5.80 & \textcolor{blue}{FM}&FM & -1.03 \\
+			\textcolor{blue}{(Id)  (0.32, 0.00)}&C2/m & \textcolor{blue}{12.14}&N/A & \textcolor{blue}{2}&2 & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.83}&5.80 & \textcolor{blue}{FM}&FM & -0.02 \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.32, 0.00)}&N/A & \textcolor{blue}{12.14}&N/A & \textcolor{blue}{3}&N/A & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.83}&N/A & \textcolor{blue}{FM}&N/A & -0.79 \\
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&N/A & \textcolor{blue}{11.61}&N/A & \textcolor{blue}{4}&N/A & \textcolor{blue}{6.06}&N/A & \textcolor{blue}{5.90}&N/A & \textcolor{blue}{FM}&N/A & -0.31 \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results
+        Ref. \cite{Klein2019} (black), which were obtained using 
+        VASP with the both the LDA, PBE and optB86b functionals. 
+        Magnetic calculations were carried out using LSDA+U with (U=3). The unit of 
+        $\Delta$\textit{E}$_{\text{mag}}$ 
+        is meV/unit cell.}
+\end{table*}

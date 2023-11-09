@@ -1,0 +1,22 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|G|}
+\multicolumn{13}{|l|}{\textbf{Homobilayers of VSe$_{2}$ (H phase)}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & $\Delta$\textit{E}$_{\text{mag}}$ \\
+			\hline
+			\textcolor{blue}{(Id)  (-0.67, -0.33)}&N/A & \textcolor{blue}{26.44}&N/A & \textcolor{blue}{1}&N/A & \textcolor{blue}{3.34}&N/A & \textcolor{blue}{6.38}&N/A & \textcolor{blue}{FM}&N/A & -0.90 \\
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (-0.33, -0.67)}&AB & \textcolor{blue}{26.16}&N/A & \textcolor{blue}{2}&2 & \textcolor{blue}{3.34}&N/A & \textcolor{blue}{6.42}&N/A & \textcolor{blue}{AFM}&AFM & 0.32 \\
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (0.00, 0.00)}&A'B & \textcolor{blue}{26.16}&N/A & \textcolor{blue}{3}&1 & \textcolor{blue}{3.34}&N/A & \textcolor{blue}{6.37}&N/A & \textcolor{blue}{AFM}&AFM & 0.61 \\
+			\textcolor{blue}{(Id)  (0.50, 0.00)}&N/A & \textcolor{blue}{25.12}&N/A & \textcolor{blue}{4}&N/A & \textcolor{blue}{3.34}&N/A & \textcolor{blue}{6.44}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (0.50, 0.00)}&N/A & \textcolor{blue}{22.17}&N/A & \textcolor{blue}{5}&N/A & \textcolor{blue}{3.34}&N/A & \textcolor{blue}{6.64}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (0.33, -0.33)}&AA & \textcolor{blue}{19.54}&N/A & \textcolor{blue}{6}&3 & \textcolor{blue}{3.34}&N/A & \textcolor{blue}{6.90}&N/A & \textcolor{blue}{N/A}&AFM & N/A \\
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&N/A & \textcolor{blue}{19.34}&N/A & \textcolor{blue}{7}&N/A & \textcolor{blue}{3.34}&N/A & \textcolor{blue}{6.92}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results
+        Ref. \cite{Li2020} (black), which were obtained using VASP 
+        with the PBE+U functional (U=1 eV on V $d$-orbitals) 
+        and D2 van der Waals corrections. The energy difference is in meV/cell.}
+\end{table*}

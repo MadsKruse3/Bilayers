@@ -1,0 +1,19 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|D|D|D|D|D|D|D|C|}
+\multicolumn{10}{|l|}{\textbf{Homobilayers of WS$_{2}$ (H phase)}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} \\
+			\hline
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (-0.33, -0.67)}&AA' & \textcolor{blue}{27.50}&21.02 & \textcolor{blue}{1}&1 & \textcolor{blue}{3.19}&3.15 & \textcolor{blue}{6.24}&6.24 \\
+			\textcolor{blue}{(Id)  (-0.67, -0.33)}&AB' & \textcolor{blue}{27.20}&18.82 & \textcolor{blue}{2}&3 & \textcolor{blue}{3.19}&3.15 & \textcolor{blue}{6.23}&6.24 \\
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (0.00, 0.00)}&AB & \textcolor{blue}{25.62}&20.65 & \textcolor{blue}{3}&2 & \textcolor{blue}{3.19}&3.15 & \textcolor{blue}{6.32}&6.24 \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Jiangang2014} (black), which were obtained using 
+        VASP with the PBE functional and D2 van der Waals corrections. 
+        The in plane lattice constants in the reference are those 
+        obtained experimentally for the bulk version of the material.}
+\end{table*}

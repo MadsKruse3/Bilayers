@@ -1,0 +1,21 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|G|}
+\multicolumn{13}{|l|}{\textbf{Homobilayers of Fe$_{3}$GeTe$_{2}$}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{min}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & $\Delta$\textit{E}$_{\text{mag}}$ \\
+			\hline
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (0.33, 0.33)}&0 twist & \textcolor{blue}{28.14}&N/A & \textcolor{blue}{1}&N/A & \textcolor{blue}{4.06}&3.991$^{*}$ & \textcolor{blue}{2.96}&3.30 & \textcolor{blue}{AFM}&N/A & 0.02 \\
+			\textcolor{blue}{(Id)  (0.33, -0.33)}&180 twist & \textcolor{blue}{27.28}&N/A & \textcolor{blue}{2}&N/A & \textcolor{blue}{4.06}&3.991$^{*}$ & \textcolor{blue}{3.04}&4.27 & \textcolor{blue}{FM}&FM & -14.11 \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results
+        Ref. \cite{Chen2022} (black), which were obtained using VASP with 
+        the PBE+U functional (U=0.5 eV on Fe $d$-orbitals) and D3 van 
+        der Waals corrections (with Becke-Johnson damping). The unit of 
+        $\Delta$\textit{E}$_{\text{mag}}$ 
+        is meV/unit cell.(*) The lattice constants are for the bulk 
+        structure and are subsequently opmitized for the bilayers. 
+        The resulting lattice constants for each bilayer are not stated in the reference.}
+\end{table*}

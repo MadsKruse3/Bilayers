@@ -1,0 +1,23 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|G|}
+\multicolumn{13}{|l|}{\textbf{Homobilayers of NiBr$_{2}$ (T phase)}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & $\Delta$\textit{E}$_{\text{mag}}$ \\
+			\hline
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&AA & \textcolor{blue}{13.85}&N/A & \textcolor{blue}{1}&1 & \textcolor{blue}{3.70}&3.74 & \textcolor{blue}{6.10}&N/A & \textcolor{blue}{AFM}&AFM & 2.76 \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (-0.33, -0.67)}&N/A & \textcolor{blue}{13.80}&N/A & \textcolor{blue}{2}&N/A & \textcolor{blue}{3.70}&3.74 & \textcolor{blue}{6.11}&N/A & \textcolor{blue}{AFM}&N/A & 2.25 \\
+			\textcolor{blue}{(Id)  (-0.33, -0.67)}&AB & \textcolor{blue}{13.65}&N/A & \textcolor{blue}{3}&2 & \textcolor{blue}{3.70}&3.74 & \textcolor{blue}{6.13}&N/A & \textcolor{blue}{AFM}&AFM & 2.85 \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.48, -0.03)}&N/A & \textcolor{blue}{12.93}&N/A & \textcolor{blue}{4}&N/A & \textcolor{blue}{3.70}&N/A & \textcolor{blue}{6.22}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.50, 0.00)}&N/A & \textcolor{blue}{12.92}&N/A & \textcolor{blue}{5}&N/A & \textcolor{blue}{3.70}&N/A & \textcolor{blue}{6.21}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.50, 0.00)}&N/A & \textcolor{blue}{11.31}&N/A & \textcolor{blue}{6}&N/A & \textcolor{blue}{3.70}&N/A & \textcolor{blue}{6.44}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (-0.67, -0.33)}&N/A & \textcolor{blue}{10.16}&N/A & \textcolor{blue}{7}&N/A & \textcolor{blue}{3.70}&N/A & \textcolor{blue}{6.62}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.00, 0.00)}&N/A & \textcolor{blue}{10.13}&N/A & \textcolor{blue}{8}&N/A & \textcolor{blue}{3.70}&N/A & \textcolor{blue}{6.62}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Lu2019} (black), which were obtained using 
+        VASP with the PBE+U functional (U=4 eV on Ni $d$-orbitals)
+        and D3 van der Waals corrections. The energy difference is in meV/cell.}
+\end{table*}

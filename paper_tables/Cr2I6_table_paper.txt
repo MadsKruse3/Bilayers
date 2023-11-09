@@ -1,0 +1,21 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|G|}
+\multicolumn{13}{|l|}{\textbf{Homobilayers of Cr$_{2}$I$_{6}$}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & $\Delta$\textit{E}$_{\text{mag}}$ \\
+			\hline
+			\textcolor{blue}{(Id)  (0.33, -0.33)}&AB & \textcolor{blue}{13.71}&N/A & \textcolor{blue}{1}&1 & \textcolor{blue}{7.01}&6.89 & \textcolor{blue}{6.65}&6.68 & \textcolor{blue}{FM}&FM & -9.37 \\
+			\textcolor{blue}{(Id)  (0.00, -0.69)}&AB' & \textcolor{blue}{13.53}&N/A & \textcolor{blue}{2}&2 & \textcolor{blue}{7.01}&6.89 & \textcolor{blue}{6.69}&6.73 & \textcolor{blue}{AFM}&AFM & 2.91 \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.00, -0.32)}&AB' & \textcolor{blue}{13.43}&N/A & \textcolor{blue}{3}&2 & \textcolor{blue}{7.01}&N/A & \textcolor{blue}{6.70}&6.73 & \textcolor{blue}{FM}&AFM & -3.89 \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Sivadas2018} (black), which were obtained using 
+        VASP with the PBEsol+U functional (U=3 eV on Cr $d$-orbitals) 
+        and D3 van der Waals corrections. The unit of 
+        $\Delta$\textit{E}$_{\text{mag}}$ 
+        is meV/unit cell. The in plane lattice constants in the reference 
+        were computed by optimization calculations performed for the bilayers.}
+\end{table*}

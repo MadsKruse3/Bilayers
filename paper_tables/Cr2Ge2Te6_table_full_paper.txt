@@ -1,0 +1,34 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|G|}
+\multicolumn{13}{|l|}{\textbf{Homobilayers of Cr$_{2}$Ge$_{2}$Te$_{6}$}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{min}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & $\Delta$\textit{E}$_{\text{mag}}$ \\
+			\hline
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (0.32, -0.07)}&AB & \textcolor{blue}{21.66}&N/A & \textcolor{blue}{1}&1 & \textcolor{blue}{6.89}&6.84 & \textcolor{blue}{3.40}&3.44 & \textcolor{blue}{AFM}&FM & 21.00 \\
+			\textcolor{blue}{(Id)  (0.33, 0.67)}&AB & \textcolor{blue}{21.66}&N/A & \textcolor{blue}{2}&1 & \textcolor{blue}{6.89}&6.84 & \textcolor{blue}{3.40}&3.44 & \textcolor{blue}{AFM}&FM & 20.99 \\
+			\textcolor{blue}{(Id)  (0.25, 0.63)}&N/A & \textcolor{blue}{20.79}&N/A & \textcolor{blue}{3}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.46}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id, Iz)  (0.67, 0.00)}&N/A & \textcolor{blue}{20.61}&N/A & \textcolor{blue}{4}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.50}&N/A & \textcolor{blue}{AFM}&N/A & 17.12 \\
+			\textcolor{blue}{(R$^{z}_{2}$)  (0.32, 0.27)}&N/A & \textcolor{blue}{20.61}&N/A & \textcolor{blue}{5}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.50}&N/A & \textcolor{blue}{AFM}&N/A & 17.22 \\
+			\textcolor{blue}{(R$^{z}_{2}$)  (-0.01, -0.36)}&N/A & \textcolor{blue}{20.38}&N/A & \textcolor{blue}{6}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.52}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.33, 0.34)}&N/A & \textcolor{blue}{20.27}&N/A & \textcolor{blue}{7}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.56}&N/A & \textcolor{blue}{AFM}&N/A & 20.30 \\
+			\textcolor{blue}{(Id)  (0.29, 0.33)}&N/A & \textcolor{blue}{20.08}&N/A & \textcolor{blue}{8}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.56}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&N/A & \textcolor{blue}{19.53}&N/A & \textcolor{blue}{9}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.52}&N/A & \textcolor{blue}{AFM}&N/A & 16.76 \\
+			\textcolor{blue}{(R$^{z}_{2}$)  (0.25, 0.27)}&N/A & \textcolor{blue}{19.51}&N/A & \textcolor{blue}{10}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.56}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id, Iz)  (0.50, 0.00)}&N/A & \textcolor{blue}{19.24}&N/A & \textcolor{blue}{11}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.60}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (0.50, 0.00)}&N/A & \textcolor{blue}{18.43}&N/A & \textcolor{blue}{12}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.64}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{2}$)  (0.50, 0.00)}&N/A & \textcolor{blue}{16.95}&N/A & \textcolor{blue}{13}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.78}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.50, 0.00)}&N/A & \textcolor{blue}{16.85}&N/A & \textcolor{blue}{14}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.80}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{2}$)  (0.25, -0.11)}&N/A & \textcolor{blue}{15.46}&N/A & \textcolor{blue}{15}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.95}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.25, 0.00)}&N/A & \textcolor{blue}{15.21}&N/A & \textcolor{blue}{16}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{3.97}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.00, 0.37)}&N/A & \textcolor{blue}{14.89}&N/A & \textcolor{blue}{17}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{4.02}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{2}$)  (-0.01, 0.27)}&N/A & \textcolor{blue}{14.08}&N/A & \textcolor{blue}{18}&N/A & \textcolor{blue}{6.89}&N/A & \textcolor{blue}{4.11}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results
+        Ref. \cite{Ren2021} (black), which were obtained using VASP with 
+        the PBEsol+U functional (U = 1.7 eV on Cr $d$-orbitals). The unit of 
+        $\Delta$\textit{E}$_{\text{mag}}$ 
+        is meV/unit cell.}
+\end{table*}

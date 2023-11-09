@@ -1,0 +1,29 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|G|}
+\multicolumn{13}{|l|}{\textbf{Homobilayers of Cr$_{2}$Br$_{6}$}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & $\Delta$\textit{E}$_{\text{mag}}$ \\
+			\hline
+			\textcolor{blue}{(Id)  (0.33, -0.33)}&AB (aB$_{b}$c) & \textcolor{blue}{13.41}&N/A & \textcolor{blue}{1}&1 & \textcolor{blue}{6.45}&N/A & \textcolor{blue}{6.14}&N/A & \textcolor{blue}{FM}&FM & -3.39 \\
+			\textcolor{blue}{(Id)  (0.00, -0.68)}&HT (bC$_{c}$a) & \textcolor{blue}{13.19}&N/A & \textcolor{blue}{2}&2 & \textcolor{blue}{6.45}&N/A & \textcolor{blue}{6.17}&N/A & \textcolor{blue}{AFM}&AFM & 0.34 \\
+			\textcolor{blue}{(Id)  (0.00, -0.69)}&HT (bC$_{c}$a) & \textcolor{blue}{13.19}&N/A & \textcolor{blue}{3}&2 & \textcolor{blue}{6.45}&N/A & \textcolor{blue}{6.17}&N/A & \textcolor{blue}{AFM}&AFM & 0.21 \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.68, 0.00)}&rHT (bB$_{a}$c) & \textcolor{blue}{13.17}&N/A & \textcolor{blue}{4}&3 & \textcolor{blue}{6.45}&N/A & \textcolor{blue}{6.17}&N/A & \textcolor{blue}{FM}&FM & -1.87 \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.00, -0.32)}&rHT' (bC$_{a}$c) & \textcolor{blue}{13.17}&N/A & \textcolor{blue}{5}&3 & \textcolor{blue}{6.45}&N/A & \textcolor{blue}{6.17}&N/A & \textcolor{blue}{FM}&FM & -1.90 \\
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&AA (aA$_{b}$c) & \textcolor{blue}{12.37}&N/A & \textcolor{blue}{6}&4 & \textcolor{blue}{6.45}&N/A & \textcolor{blue}{6.26}&N/A & \textcolor{blue}{FM}&AFM & -1.04 \\
+			\textcolor{blue}{N/A}&AC (aC$_{b}$c) & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{N/A}&HT (bA$_{c}a$) & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&AFM & N/A \\
+			\textcolor{blue}{N/A}&bB$_{c}$a & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{N/A}&rHT (aA$_{c}$b) & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&FM & N/A \\
+			\textcolor{blue}{N/A}&aB$_{c}$b & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{N/A}&aC$_{c}$b & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{N/A}&rHT' (bA$_{a}$c) & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&FM & N/A \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Gibertini2021} (black), which were obtained using 
+        Quantum expresso with the vdW-DF2 functional. The unit of 
+        $\Delta$\textit{E}$_{\text{mag}}$ 
+        is meV/unit cell.}
+\end{table*}

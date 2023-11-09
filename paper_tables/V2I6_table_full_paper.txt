@@ -1,0 +1,30 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|B|B|B|B|B|B|B|B|B|B|G|}
+\multicolumn{13}{|l|}{\textbf{Homobilayers of V$_{2}$I$_{6}$}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{cen}}$ [Å]} & \multicolumn{2}{c|}{Mag. order} & $\Delta$\textit{E}$_{\text{mag}}$ \\
+			\hline
+			\textcolor{blue}{(Id)  (0.33, -0.33)}&AB & \textcolor{blue}{13.01}&N/A & \textcolor{blue}{1}&1 & \textcolor{blue}{7.15}&6.84 & \textcolor{blue}{6.67}&6.67 & \textcolor{blue}{N/A}&FM & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.68, 0.00)}&N/A & \textcolor{blue}{12.52}&N/A & \textcolor{blue}{2}&N/A & \textcolor{blue}{7.15}&N/A & \textcolor{blue}{6.73}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.00, -0.32)}&N/A & \textcolor{blue}{12.52}&N/A & \textcolor{blue}{3}&N/A & \textcolor{blue}{7.15}&N/A & \textcolor{blue}{6.73}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.00, 0.33)}&N/A & \textcolor{blue}{12.52}&N/A & \textcolor{blue}{4}&N/A & \textcolor{blue}{7.15}&N/A & \textcolor{blue}{6.73}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (-0.01, -0.33)}&AB' & \textcolor{blue}{12.52}&N/A & \textcolor{blue}{5}&2 & \textcolor{blue}{7.15}&6.84 & \textcolor{blue}{6.73}&6.66 & \textcolor{blue}{N/A}&AFM & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.04, -0.30)}&AB' & \textcolor{blue}{12.43}&N/A & \textcolor{blue}{6}&2 & \textcolor{blue}{7.15}&6.84 & \textcolor{blue}{6.75}&6.66 & \textcolor{blue}{N/A}&AFM & N/A \\
+			\textcolor{blue}{(Id)  (0.04, 0.33)}&N/A & \textcolor{blue}{12.38}&N/A & \textcolor{blue}{7}&N/A & \textcolor{blue}{7.15}&N/A & \textcolor{blue}{6.75}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.00, 0.00)}&N/A & \textcolor{blue}{11.73}&N/A & \textcolor{blue}{8}&N/A & \textcolor{blue}{7.15}&N/A & \textcolor{blue}{6.82}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.50, 0.00)}&N/A & \textcolor{blue}{11.37}&N/A & \textcolor{blue}{9}&N/A & \textcolor{blue}{7.15}&N/A & \textcolor{blue}{6.87}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.50, 0.00)}&N/A & \textcolor{blue}{9.922}&N/A & \textcolor{blue}{10}&N/A & \textcolor{blue}{7.15}&N/A & \textcolor{blue}{7.10}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.33, -0.33)}&N/A & \textcolor{blue}{9.035}&N/A & \textcolor{blue}{11}&N/A & \textcolor{blue}{7.15}&N/A & \textcolor{blue}{7.29}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(Id)  (0.30, -0.67)}&N/A & \textcolor{blue}{9.010}&N/A & \textcolor{blue}{12}&N/A & \textcolor{blue}{7.15}&N/A & \textcolor{blue}{7.30}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.00, 0.00)}&N/A & \textcolor{blue}{8.768}&N/A & \textcolor{blue}{13}&N/A & \textcolor{blue}{7.15}&N/A & \textcolor{blue}{7.34}&N/A & \textcolor{blue}{N/A}&N/A & N/A \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Nguyen2021} (black), which were obtained using 
+        VASP with the PBE+U functional (U=2 eV on V $d$-orbitals) 
+        and D2 van der Waals corrections. The energy difference is in meV/cell. 
+        The lattice constants in the reference are ones 
+        obtained experimentally.}
+\end{table*}

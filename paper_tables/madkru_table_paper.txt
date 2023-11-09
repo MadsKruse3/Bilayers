@@ -1,0 +1,13 @@
+\begin{table}
+	\begin{center}
+		\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c|c|c}
+			\makecell{Bilayer \\ descriptor} & \makecell{Bilayer \\ type: \\ This \\ work} & \makecell{Bilayer \\ type: \\ Reference} & \makecell{Binding \\ energy [\ meV/Å$^2$]\: \\ This \\ work} & \makecell{Order \\ of \\ stability: \\ Reference} & \makecell{Hubbard U \\ correction [\ eV]\: \\ This Work} & \makecell{Hubbard U \\ correction [\ eV]\: \\ Reference} & \makecell{In plane \\ lattice \\ constants [\ Å]\: \\ This work} & \makecell{In plane \\ lattice \\ constants [\ Å]\: \\ Reference} & \makecell{Interlayer \\ distance [\ Å]\: \\ This work} & \makecell{Interlayer \\ distance [\ Å]\: \\ Reference} & \makecell{Magnetic \\ Configuration: \\ This work} & \makecell{Magnetic \\ Configuration: \\ Reference} & \makecell{Interlayer \\ exchange \\ constant [\ meV]\ } \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{The table contains comparisons between 
+            our results for madkru with those found elsewhere in literature. The columns contain: 
+            bilayer stacking types, binding energy using the, order of stability found in the reference paper,
+            lattice constants, interlayer distances measured between the same atoms in the middle of each layer, 
+            magnetic configurations as well as the interlayer exchange constant computed in this work.}
+\end{table}

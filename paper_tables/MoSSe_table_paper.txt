@@ -1,0 +1,29 @@
+\begin{table*}[!h]
+	\begin{center}
+\begin{tabular}{|A|E|D|D|D|D|D|D|D|C|}
+\multicolumn{10}{|l|}{\textbf{Homobilayers of MoSSe (H phase)}}
+\\
+\hline
+			\multicolumn{2}{|c|}{Stacking order} & \multicolumn{2}{c|}{\textit{E}$_{\text{b}}$ [meV/Å$^{2}$]} & \multicolumn{2}{c|}{Stability} & \multicolumn{2}{c|}{\textit{a} [Å]} & \multicolumn{2}{c|}{\textit{d}$_{\text{min}}$ [Å]} \\
+			\hline
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.67, 0.33)}&AA'$_{SeSe}$ & \textcolor{blue}{28.86}&29.09 & \textcolor{blue}{1}&1 & \textcolor{blue}{3.25}&N/A & \textcolor{blue}{3.21}&3.21 \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (-0.33, -0.67)}&AA'$_{SeSe}$ & \textcolor{blue}{28.86}&29.09 & \textcolor{blue}{1}&1 & \textcolor{blue}{3.25}&N/A & \textcolor{blue}{3.21}&3.21 \\
+			\textcolor{blue}{(Id)  (0.67, 0.33)}&AB$_{SeSe}$ & \textcolor{blue}{28.26}&28.47 & \textcolor{blue}{2}&3 & \textcolor{blue}{3.25}&N/A & \textcolor{blue}{3.23}&3.24 \\
+			\textcolor{blue}{(Id)  (-0.67, -0.33)}&N/A & \textcolor{blue}{28.26}&N/A & \textcolor{blue}{3}&N/A & \textcolor{blue}{3.25}&N/A & \textcolor{blue}{3.23}&N/A \\
+			\textcolor{blue}{(Id)  (0.67, 0.33)}&AB$_{SSe}$ & \textcolor{blue}{28.05}&28.54 & \textcolor{blue}{4}&2 & \textcolor{blue}{3.25}&N/A & \textcolor{blue}{3.07}&3.12 \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (-0.33, -0.67)}&AA'$_{SSe}$ & \textcolor{blue}{27.81}&28.31 & \textcolor{blue}{5}&4 & \textcolor{blue}{3.25}&N/A & \textcolor{blue}{3.11}&3.14 \\
+			\textcolor{blue}{(Id)  (-0.67, -0.33)}&N/A & \textcolor{blue}{27.38}&N/A & \textcolor{blue}{6}&N/A & \textcolor{blue}{3.25}&N/A & \textcolor{blue}{3.12}&N/A \\
+			\textcolor{blue}{(R$^{z}_{3}$, Iz)  (-0.67, -0.33)}&N/A & \textcolor{blue}{26.72}&N/A & \textcolor{blue}{7}&N/A & \textcolor{blue}{3.25}&N/A & \textcolor{blue}{2.99}&N/A \\
+			\textcolor{blue}{(R$^{z}_{2}$, Iz)  (-0.33, -0.67)}&AA'$_{SS}$ & \textcolor{blue}{26.27}&26.54 & \textcolor{blue}{8}&6 & \textcolor{blue}{3.25}&N/A & \textcolor{blue}{3.04}&3.08 \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.00, 0.00)}&AB'$_{SeSe}$ & \textcolor{blue}{26.27}&N/A & \textcolor{blue}{9}&N/A & \textcolor{blue}{3.25}&N/A & \textcolor{blue}{3.34}&N/A \\
+			\textcolor{blue}{(R$^{z}_{6}$)  (0.00, 0.00)}&AB'$_{SSe}$ & \textcolor{blue}{26.09}&N/A & \textcolor{blue}{10}&N/A & \textcolor{blue}{3.25}&N/A & \textcolor{blue}{3.17}&N/A \\
+			\textcolor{blue}{N/A}&AB_{SS} & \textcolor{blue}{N/A}&26.96 & \textcolor{blue}{N/A}&5 & \textcolor{blue}{N/A}&N/A & \textcolor{blue}{N/A}&3.03 \\
+		\end{tabular}
+	\end{center}
+	\caption{Comparison of our results (blue) with results 
+        Ref. \cite{Songrui2019} (black), which were obtained using 
+        VASP with the PBE functional and D2 van der Waals corrections.
+        NB: The binding energy per area is calculated using the binding energies found in the 
+        reference and the lattice constant 3.25 Å, since no numbers 
+        were given in the reference.}
+\end{table*}
