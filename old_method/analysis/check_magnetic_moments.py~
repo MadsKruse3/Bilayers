@@ -1,0 +1,121 @@
+from pathlib import Path
+from utils import listdirs
+import os, re
+from asr.core import read_json
+import matplotlib.pyplot as plt
+import numpy as np
+from ase.io import read
+from gpaw import GPAW
+
+
+def check_magmoms(folder):
+    name_material = []
+    atoms = read(f"{folder}/structure.json")
+    dpath = f"{folder}/gs_U3.0.gpw"
+    magnetic_atoms = []
+
+    if os.path.exists(dpath):
+    
+        TM3d_atoms = ['V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu']
+        
+        for atom in atoms:
+            if atom.symbol in TM3d_atoms:
+                magnetic_atoms.append(1)
+            else:
+                magnetic_atoms.append(0)
+                
+        magnetic_atoms_upper_layer = magnetic_atoms[:len(magnetic_atoms)//2]
+        mag_atoms = [x for x, z in enumerate(magnetic_atoms) if z == 1]
+
+        lines = []
+        magmoms = []
+        with open(f'{folder}/fm_U3.0.txt', 'r') as read_obj:
+            for line in read_obj:
+                #print(line)
+                line = line.strip()
+                lines.append(line)
+                if line == 'Local magnetic moments:': 
+                    mag_line_fm = line
+                    
+            if not 'mag_line_fm' in locals():
+                read_obj.close()
+                deviation_matrix_fm = 'None'
+                deviation_matrix_afm = 'None'
+                return deviation_matrix_fm, deviation_matrix_afm
+
+            start_line = lines.index(mag_line_fm)
+            maglines = [start_line + 1 + x for x in mag_atoms]
+
+            for line in lines:
+                if lines.index(line) in maglines:
+                    newline = str(str(line).split("(")[-1]).split(",")[-1]
+                    magmoms.append(str(newline).split(")")[0])
+    
+            magmoms = [float(x) for x in magmoms]
+            deviation_matrix_fm = []
+            for x in magmoms:
+                deviation_matrix_fm.append([ (abs(x) - abs(y))/abs(x) for y in magmoms])
+        
+            deviation_matrix_fm = np.array(deviation_matrix_fm)
+            
+        read_obj.close()
+
+        lines = []
+        magmoms = []
+        with open(f'{folder}/afm_U3.0.txt', 'r') as read_obj:
+            for line in read_obj:
+                line = line.strip()
+                lines.append(line)
+                if line == 'Local magnetic moments:': 
+                    mag_line_afm = line
+
+            if not 'mag_line_afm' in locals():
+                read_obj.close()
+                deviation_matrix_fm = 'None'
+                deviation_matrix_afm = 'None'
+                return deviation_matrix_fm, deviation_matrix_afm
+                
+            start_line = lines.index(mag_line_afm) ##AFM
+            maglines = [start_line + 1 + x for x in mag_atoms]
+
+            for line in lines:
+                if lines.index(line) in maglines:
+                    newline = str(str(line).split("(")[-1]).split(",")[-1]
+                    magmoms.append(str(newline).split(")")[0])
+
+            magmoms = [float(x) for x in magmoms]
+            deviation_matrix_afm = []
+            for x in magmoms:
+                deviation_matrix_afm.append([ (abs(x) - abs(y))/abs(x) for y in magmoms])
+        
+            deviation_matrix_afm = np.array(deviation_matrix_afm)
+    
+        read_obj.close()
+    
+        return deviation_matrix_fm, deviation_matrix_afm
+
+if __name__ == "__main__":
+    from argparse import ArgumentParser
+    parser = ArgumentParser()
+    parser.add_argument("folders", nargs="*", help="Monolayer folders to analyse.")
+
+    args = parser.parse_args()
+    
+    if len(args.folders) > 0:
+        folders = [Path(x).absolute() for x in args.folders]
+    else:
+        folders = [Path(".").absolute()]
+
+
+    for folder in folders:
+        if os.path.isfile(f'{folder}/results-asr.bilayer_magnetism.json'):
+            deviation_matrix_fm, deviation_matrix_afm = check_magmoms(folder)
+            
+            for x in deviation_matrix_fm, deviation_matrix_afm:
+                if not x == 'None':
+                    for y in x:
+                        for z in y:
+                            if abs(z) > 0.05:
+                                print(folder)
+            
+                        

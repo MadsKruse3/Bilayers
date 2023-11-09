@@ -1,0 +1,223 @@
+from pathlib import Path
+from utils import listdirs
+import os, re
+from asr.core import read_json, ASRResult
+import matplotlib.pyplot as plt
+import numpy as np
+from ase.io import read
+from gpaw import GPAW
+
+""" Run this scripts as:
+python3 bilayerworkflow/magnetic_type.py tree/*/*/*/*/ """
+
+def get_monolayer_data(monolayer_folder):
+    monolayer_folder = monolayer_folder
+    fname = 'results-asr.magnetic_anisotropy.json'
+    path = "/".join([x for x in monolayer_folder.split("/") if x != ""][-3:])
+    
+    c2db_path = "/home/niflheim2/cmr/C2DB-ASR/tree/" + path + "/" + fname
+    icsd_cod_path = "/home/niflheim2/cmr/C2DB-ASR/icsd_cod_materials/tree/" + path + "/" + fname
+    excluded_AFM_path = "/home/niflheim2/cmr/C2DB-ASR/excluded_AFM_tree/" + path + "/" + fname
+
+    if Path(c2db_path).is_file():
+        data = read_json(c2db_path)
+        dE_zx = data["dE_zx"]
+        dE_zy = data["dE_zy"]
+
+    if Path(icsd_cod_path).is_file():
+        data = read_json(icsd_cod_path)
+        dE_zx = data["dE_zx"]
+        dE_zy = data["dE_zy"]
+
+    if Path(excluded_AFM_path).is_file():
+        #print(folder)
+        data = read_json(excluded_AFM_path)
+        dE_zx = data["dE_zx"]
+        dE_zy = data["dE_zy"]
+        
+    return dE_zx, dE_zy
+        
+def get_bilayer_data(folder):
+    fname = f'{folder}/results-asr.magnetic_anisotropy.json'
+    if Path(f'{folder}/results-asr.magnetic_anisotropy.json').is_file():
+        data = read_json(fname)
+        dE_zx = data["dE_zx"]
+        dE_zy = data["dE_zy"]
+    else:
+        dE_zx = 'missing'
+        dE_zy = 'missing'
+
+    return dE_zx, dE_zy
+
+def get_monolayer_U_data(monolayer_folder):
+    monolayer_folder = monolayer_folder
+        
+    if Path(f'{monolayer_folder}/results-asr.magnetic_anisotropy_U.json').is_file():
+        data = read_json(f'{monolayer_folder}/results-asr.magnetic_anisotropy_U.json')
+        dE_zx = data["dE_zx"]
+        dE_zy = data["dE_zy"]
+    else:
+        dE_zx = 'missing'
+        dE_zy = 'missing'
+
+    return dE_zx, dE_zy
+        
+def get_bilayer_U_data(folder):
+    fname = f'{folder}/results-asr.magnetic_anisotropy_U.json'
+    if Path(f'{folder}/results-asr.magnetic_anisotropy_U.json').is_file():
+        data = read_json(fname)
+        dE_zx = data["dE_zx"]
+        dE_zy = data["dE_zy"]
+    else:
+        dE_zx = 'missing'
+        dE_zy = 'missing'
+
+    return dE_zx, dE_zy
+
+def get_monolayer_id(monolayer_folder):
+    monolayer_id = read_json(f"{monolayer_folder}/structure.json")
+    monolayer_id_data = monolayer_id[1]
+    data_id = monolayer_id_data["unique_id"]
+    return data_id
+
+if __name__ == "__main__":
+    from argparse import ArgumentParser
+    parser = ArgumentParser()
+    parser.add_argument("folders", nargs="*", help="Monolayer folders to analyse.")
+
+    args = parser.parse_args()
+    
+    if len(args.folders) > 0:
+        folders = [Path(x).absolute() for x in args.folders]
+    else:
+        folders = [Path(".").absolute()]
+    
+    #change_zx = []
+    #no_change_zx = []
+    #change_zy = []
+    #no_change_zy = []
+    
+    #change_zx_U = []
+    #no_change_zx_U = []
+    #change_zy_U = []
+    #no_change_zy_U = []
+    
+    no_change = []
+    change = [] 
+    no_change_U = []
+    change_U = []
+
+    total_number = []
+    total_number_U = []
+
+    double_changes = []
+
+    for folder in folders:
+        monolayer_folder = re.split('[/]',f'{folder}')
+        monolayer_folder.remove(monolayer_folder[-1])
+        monolayer_folder = "/".join(monolayer_folder)
+        if os.path.isfile(f'{folder}/results-asr.interlayer_magnetic_exchange.json'):
+            if os.path.isfile(f'{folder}/results-asr.magnetic_anisotropy.json'):
+
+                #monolayer_folder = re.split('[/]',f'{folder}')
+                #monolayer_folder.remove(monolayer_folder[-1])
+                #monolayer_folder = "/".join(monolayer_folder)
+
+                total_number.append(folder)
+                monolayer_dE_zx1, monolayer_dE_zy1 = get_monolayer_data(monolayer_folder)
+                bilayer_dE_zx1, bilayer_dE_zy1 = get_bilayer_data(folder)
+                        
+                monolayer_DE1 = max(monolayer_dE_zx1, monolayer_dE_zy1)
+                if monolayer_DE1 < 0:
+                    monolayer_sign1 = -1
+                if monolayer_DE1 > 0:
+                    monolayer_sign1 = -1
+                    if monolayer_dE_zy1 > monolayer_dE_zx1:
+                        monolayer_sign1 = 1
+            
+                bilayer_DE1 = max(bilayer_dE_zx1, bilayer_dE_zy1)
+                if bilayer_DE1 < 0:
+                    bilayer_sign1 = -1
+                if bilayer_DE1 > 0:
+                    bilayer_sign1 = -1
+                    if bilayer_dE_zy1 > bilayer_dE_zx1:
+                        bilayer_sign1 = 1
+                        
+                if np.sign(monolayer_sign1) == np.sign(bilayer_sign1):
+                    no_change.append(folder)
+                else:
+                    change.append(folder)
+
+            if os.path.isfile(f'{folder}/results-asr.magnetic_anisotropy_U.json'):
+                #total_number_U.append(folder)
+                #monolayer_folder = re.split('[/]',f'{folder}')
+                #monolayer_folder.remove(monolayer_folder[-1])
+                #monolayer_folder = "/".join(monolayer_folder)
+                
+                #if not os.path.isfile(f'{monolayer_folder}/results-asr.magnetic_anisotropy_U.json'):
+                if os.path.isfile(f'{monolayer_folder}/results-asr.magnetic_anisotropy_U.json'):
+                    total_number_U.append(folder)
+                    monolayer_dE_zx2, monolayer_dE_zy2 = get_monolayer_U_data(monolayer_folder)
+                    bilayer_dE_zx2, bilayer_dE_zy2 = get_bilayer_U_data(folder)
+                        
+                    monolayer_DE2 = max(monolayer_dE_zx2, monolayer_dE_zy2)
+                    if monolayer_DE2 < 0:
+                        monolayer_sign2 = -1
+                    if monolayer_DE2 > 0:
+                        monolayer_sign2 = -1
+                        if monolayer_dE_zy2 > monolayer_dE_zx2:
+                            monolayer_sign2 = 1
+            
+                    bilayer_DE2 = max(bilayer_dE_zx2, bilayer_dE_zy2)
+                    if bilayer_DE2 < 0:
+                        bilayer_sign2 = -1
+                    if bilayer_DE2 > 0:
+                        bilayer_sign2 = -1
+                        if bilayer_dE_zy2 > bilayer_dE_zx2:
+                            bilayer_sign2 = 1
+
+                    if np.sign(monolayer_sign2) == np.sign(bilayer_sign2):
+                        no_change_U.append(folder)
+                    else:
+                        change_U.append(folder)
+                
+                    if not np.sign(monolayer_sign1) == np.sign(bilayer_sign1):
+                        if not np.sign(monolayer_sign2) == np.sign(bilayer_sign2):
+                            double_changes.append(folder)
+
+
+    #print('Change in zx-anisotropy:', len(change_zx))
+    #print('No change in zx-anisotropy:', len(no_change_zx))
+    #print('Change in zy-anisotropy:', len(change_zy))
+    #print('No change in zy-anisotropy:', len(no_change_zy))
+    
+    #print('Change in zx-anisotropy_U:', len(change_zx_U))
+    #print('No change in zx-anisotropy_U:', len(no_change_zx_U))
+    #print('Change in zy-anisotropy_U:', len(change_zy_U))
+    #print('No change in zy-anisotropy_U:', len(no_change_zy_U))
+
+    print('Change in anisotropy:', len(change))
+    print('No change in anisotropy:', len(no_change))
+    print('Change in anisotropy_U:', len(change_U))
+    print('No change in anisotropy_U:', len(no_change_U))
+
+    print('Double change:', len(double_changes))
+    
+    print('Total #materials:', len(total_number) )
+    print('Total #materials +U:', len(total_number_U) )
+
+
+
+    #print(change)
+    #print(change_U)
+    #os.chdir('/home/niflheim2/cmr/WIP/stacking/tree-mads/data_and_plots/')
+
+    #np.savetxt('anisotropy_change_zx.npy', change_zx, fmt='%7s')   
+    #np.savetxt('anisotropy_no_change_zx.npy', no_change_zx, fmt='%7s')
+    #np.savetxt('anisotropy_change_zy.npy', change_zy, fmt='%7s')   
+    #np.savetxt('anisotropy_no_change_zy.npy', no_change_zy, fmt='%7s')
+
+    #np.savetxt('anisotropy_change_zx_U.npy', change_zx_U , fmt='%7s')   
+    #np.savetxt('anisotropy_no_change_zx_U.npy', no_change_zx_U, fmt='%7s')
+    #np.savetxt('anisotropy_change_zy_U.npy', change_zy_U, fmt='%7s')   
+    #np.savetxt('anisotropy_no_change_zy_U.npy', no_change_zy_U, fmt='%7s')

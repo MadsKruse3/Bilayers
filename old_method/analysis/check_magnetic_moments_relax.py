@@ -1,0 +1,115 @@
+from pathlib import Path
+import os, re
+from asr.core import read_json
+import matplotlib.pyplot as plt
+import numpy as np
+from ase.io import read
+from gpaw import GPAW
+
+def get_magmoms(folder):
+    name_material = []
+    atoms = read(f"{folder}/structure.json")
+    dpath = f"{folder}/relax_bilayer.txt"
+    magnetic_atoms = []
+
+    TM3d_atoms = ['V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu']
+        
+    for atom in atoms:
+        if atom.symbol in TM3d_atoms:
+            magnetic_atoms.append(1)
+        else:
+            magnetic_atoms.append(0)
+    
+    magnetic_atoms_upper_layer = magnetic_atoms[:len(magnetic_atoms)//2]
+    mag_atoms = [x for x, z in enumerate(magnetic_atoms) if z == 1]
+    
+    lines = []
+    total_magmoms = []
+    list_of_magmoms = []
+    start_lines = []
+    total_mag_lines = []
+    deviation_matrices = []
+    with open(dpath, 'r') as read_obj:
+        for line in read_obj:
+            line = line.strip()
+            lines.append(line)
+            if line == 'Local magnetic moments:': 
+                start_lines.append(len(lines))
+                
+        deviation_matrices = []
+        
+        for start_line in start_lines:
+            maglines = [start_line + x for x in mag_atoms]
+            total_mag_line = start_line-2 
+            magmoms = []
+            for i in maglines:
+                newline = str(str(lines[i]).split("(")[-1]).split(",")[-1]
+                magmoms.append(float(str(newline).split(")")[0]))
+            newline = str(str(lines[total_mag_line]).split("(")[-1]).split(",")[-1]
+            newline = str(newline.split(")")[0])
+            total_magmoms.append(float(newline))
+            magmoms = [float(x) for x in magmoms]
+
+            list_of_magmoms.append(magmoms)
+           
+    read_obj.close()
+    
+    return total_magmoms, list_of_magmoms
+
+def check_magmoms(total_magmoms, list_of_magmoms):
+    magnetic_configurations = []
+    for magmoms in list_of_magmoms:
+        deviation_matrix = []
+        for x in magmoms:
+            deviation_matrix.append([ (abs(x) - abs(y))/abs(x) for y in magmoms])
+            
+        deviation_matrix = np.array(deviation_matrix)
+        
+        if np.max(abs(deviation_matrix)) > 0.05:
+            magnetic_configurations.append('ildefined') 
+            continue
+        
+        configuration_number = list_of_magmoms.index(magmoms)
+        total_magmom = total_magmoms[configuration_number]
+        if abs(total_magmom) > float(0.1):
+            if sum(np.sign(magmoms)) == len(magmoms):
+                magnetic_configurations.append('FM')
+                continue
+            else:
+                magnetic_configurations.append('ildefined')
+                continue
+        
+        if np.allclose(total_magmom,0):
+            magnetic_atoms = len(magmoms)
+            a = np.sign(magmoms)
+            a1 = a[int(len(a)/2):]
+            a2 = a[:int(len(a)/2)]
+            comparison = []
+            for x in np.arange(len(a1)):
+                comparison.append(a1[x] == -a2[x])
+            if np.all(comparison):
+                magnetic_configurations.append('AFM')
+            else:
+                magnetic_configurations.append('ildefined')
+
+    return magnetic_configurations
+
+if __name__ == "__main__":
+    from argparse import ArgumentParser
+    parser = ArgumentParser()
+    parser.add_argument("folders", nargs="*", help="Monolayer folders to analyse.")
+
+    args = parser.parse_args()
+    
+    if len(args.folders) > 0:
+        folders = [Path(x).absolute() for x in args.folders]
+    else:
+        folders = [Path(".").absolute()]
+
+
+    for folder in folders:
+        if os.path.isfile(f'{folder}/relax_bilayer.txt'):
+            total_magmoms, list_of_magmoms = get_magmoms(folder)
+            magnetic_configurations = check_magmoms(total_magmoms, list_of_magmoms)
+            print(magnetic_configurations)
+

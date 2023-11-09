@@ -1,0 +1,176 @@
+from pathlib import Path
+import os, re
+from asr.core import read_json
+import matplotlib.pyplot as plt
+import numpy as np
+from ase.io import read
+from gpaw import GPAW
+
+def check_magnetism_errors(folder):
+    if os.path.exists(f"{folder}/asr.interlayer_magnetic_exchange+-u_3.FAILED"):
+        print(folder)
+        list_of_files = os.listdir(f"{folder}")
+        job_numbers = []
+        for fil in list_of_files:
+            if fil.startswith("asr.interlayer_magnetic_exchange."):
+                if fil.endswith("err"):
+                    job_number = fil.split('.', 3)
+                    job_numbers.append(job_number[2])
+
+        mq_job_id = max(job_numbers)
+        dpath = f"{folder}/asr.interlayer_magnetic_exchange.{mq_job_id}.err"
+ 
+        with open(f'{folder}/asr.interlayer_magnetic_exchange.{mq_job_id}.err', 'r') as read_obj:
+            error_lines = []
+            for line in read_obj:
+                 #if 'assert np.all(kpt.f_n[:nocc] > 1e-6' in line:
+                 #   read_obj.close()
+                 #   return 'state is metallic'
+              
+                #if 'assert np.allclose(M, calc.get_magnetic_moment(), atol=0.05)' in line:
+                #    read_obj.close()
+                #    return 'state is metallic'
+    
+                 #if 'Check if the polarization along the a axis has discontinuity' in line:
+                 #   read_obj.close()
+                 #   return 'discontinuous polarization path'
+                 
+                 #if 'Check if the polarization along the b axis has discontinuity' in line:
+                 #   read_obj.close()
+                 #   return 'discontinuous polarization path'
+                 
+                 #if 'Check if the polarization along the c axis has discontinuity' in line:
+                 #   read_obj.close()
+                 #   return 'discontinuous polarization path'
+                 
+                 if 'gpaw.KohnShamConvergenceError: Did not converge!' in line:
+                    read_obj.close()
+                    return 'One of the DFT calculations did not converge'
+
+            
+            print(folder)
+            return 'Some other error is present' 
+        read_obj.close()
+    return []
+
+
+def get_interlayer_exchange(bilayer_folder):
+            atoms = read(f"{bilayer_folder}/structure.json")
+            dpath = f"{bilayer_folder}/results-asr.interlayer_magnetic_exchange.json"
+            magnetic_atoms = []
+
+            TM3d_atoms = ['Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn']
+               
+            if os.path.exists(dpath):
+                for atom in atoms:
+                    if atom.symbol in TM3d_atoms:
+                        magnetic_atoms.append(1)
+                    else:
+                        magnetic_atoms.append(0)
+                
+                mag_atoms = [x for x, z in enumerate(magnetic_atoms) if z == 1]
+                data = read_json(dpath)
+
+                magmoms_FM = data["magmoms_fm"]
+                magmom_FM = data["M_FM"]
+                magmoms_AFM = data["magmoms_afm"]
+                magmom_AFM = data["M_AFM"]
+                exchange_energy = data["eDIFF"]
+ 
+                deviation_matrix_fm = []
+                for x in mag_atoms:
+                    deviation_matrix_fm.append([ (abs(magmoms_FM[x]) - abs(magmoms_FM[y]))/abs(magmoms_FM[x]) for y in mag_atoms])
+                deviation_matrix_fm = np.array(deviation_matrix_fm)
+        
+                deviation_matrix_afm = []
+                for x in mag_atoms:
+                    deviation_matrix_afm.append([ (abs(magmoms_AFM[x]) - abs(magmoms_AFM[y]))/abs(magmoms_AFM[x]) for y in mag_atoms])
+                deviation_matrix_afm = np.array(deviation_matrix_afm)
+            
+                if not np.allclose((magmom_AFM/len(mag_atoms)),0, atol=0.01):
+                    deviation_matrix_fm = 'None'
+                    deviation_matrix_afm = 'None'
+            else:
+                deviation_matrix_fm = 'None'
+                deviation_matrix_afm = 'None'
+
+            check_values = []
+            if not deviation_matrix_fm == 'None':
+                if not deviation_matrix_afm == 'None':
+                    for x in deviation_matrix_fm, deviation_matrix_afm:
+                        for y in x:
+                            for z in y:
+                                if abs(z) > 0.05:
+                                    check_values.append(z)
+                            
+            if deviation_matrix_fm == 'None' or deviation_matrix_afm == 'None':
+                check_values.append('None')
+            if len(check_values) == 0:
+                return dict(exchange_energy=exchange_energy, 
+                            magmoms_FM=magmoms_FM, magmom_FM=magmom_FM, magmoms_AFM=magmoms_AFM, magmom_AFM=magmom_AFM)
+
+            if not len(check_values) == 0:
+                return []
+
+if __name__ == "__main__":
+    from argparse import ArgumentParser
+    parser = ArgumentParser()
+    parser.add_argument("folders", nargs="*", help="Monolayer folders to analyse.")
+
+    args = parser.parse_args()
+    
+    if len(args.folders) > 0:
+        folders = [Path(x).absolute() for x in args.folders]
+    else:
+        folders = [Path(".").absolute()]
+
+    #atoms_too_close = []
+    #no_pbc = []
+    convergence = []
+    #broken_symmetry = []
+
+    #non_polar = []
+    #polarizations = []
+    
+    unphysical_magnetic_calculations = []
+    interlayer_couplings = []
+    for bilayer_folder in folders:
+        error = check_magnetism_errors(bilayer_folder)
+        #if error == 'Atoms too close to zero boundary':
+        #    no_pbc.append(folder)
+        #if error == 'Atoms too close to each other':
+        #    atoms_too_close.append(folder)
+        if error == 'One of the DFT calculations did not converge':
+            convergence.append(bilayer_folder)
+        #if error == 'Broken Symmetry':
+        #    broken_symmetry.append(folder)
+        
+        if os.path.exists(f"{bilayer_folder}/results-asr.interlayer_magnetic_exchange.json"):
+            interlayer_exchange = get_interlayer_exchange(bilayer_folder)
+            if not len(interlayer_exchange) == 0:
+                interlayer_couplings.append(bilayer_folder)
+            if len(interlayer_exchange) == 0:
+                unphysical_magnetic_calculations.append(bilayer_folder)
+
+    #print('Non-polar materials:', len(non_polar))
+    #print('Number of materials with a polarization calculation:', len(polarizations))
+    
+    #print('Number of materials where relaxation cannot be performed due to issues with the cell boundary:', len(no_pbc))
+    #print('Number of materials where atoms in the centrosymmetric structure are too close to perform a relaxation:', len(atoms_too_close))
+    #print('Number of materials where a relaxation did not converge:', len(convergence_relaxation))
+
+    #print('Number of materials with a metallic state along the polarization path:', len(error_metal_state))
+    #print('Number of materials with a discontinuous polarization path:', len(discontinuity))
+    #print('Number of materials where a calculation did not converge:', len(convergence))
+    #print('Total number of materials:', len(folders))
+
+    
+    #materials_accounted_for = non_polar + polarizations + convergence + discontinuity + error_metal_state + atoms_too_close + no_pbc + convergence_relaxation + broken_symmetry
+    #materials_not_accounted_for = []
+    #for folder in folders:
+    #    if not folder in materials_accounted_for:
+    #        print(folder)
+    #        materials_not_accounted_for.append(folder)
+
+
+    #print(len(materials_not_accounted_for))
